@@ -24,55 +24,121 @@
             }
 
             .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                border: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+            }
+
+            .card {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 15px;
+                max-width: 400px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-left: 16px;
+            }
+            .card h3 {
+                color: #333;
+                font-size: 1.2em;
+            }
+            .card p {
+                font-size: 0.9em;
+                color: #666;
+            }
+            .product {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            .product img {
+                width: 80px;
+                border-radius: 5px;
+            }
+            .product-info {
+                flex: 1;
+            }
+            .price {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: red;
+            }
+            .old-price {
+                text-decoration: line-through;
+                color: #888;
+                font-size: 0.9em;
+            }
+            .efficiency {
+                display: inline-block;
+                background: #4CAF50;
+                color: white;
+                padding: 3px 6px;
+                font-size: 0.8em;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+
+            .divider {
+                background-color: #ddd;
+                height: 2px;
+                width: 100%;   
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
         </style>
     </head>
 
     <body>
-
-        <div class="box">
-            <p>Element 1</p>
-            <p>Element 2</p>
-            <p>Element 3</p>
-        </div>
-
-        <div class="box" aria-label="Zusammenfassung aller Elemente: Dies ist eine alternative Beschreibung.">
-            <p>Element 1</p>
-            <p>Element 2</p>
-            <p>Element 3</p>
-        </div>        
-
-        <div class="box" aria-label="Gesamter Text, der vorgelesen werden soll">
-            <p>Element 1</p>
-            <p>Element 2</p>
-            <p>Element 3</p>
-        </div>
-
-        <div class="box" aria-label="Gesamter Text, der vorgelesen werden soll">
-            <p aria-hidden="true">Element 1</p>
-            <p aria-hidden="true">Element 2</p>
-            <p aria-hidden="true">Element 3</p>
-        </div>
-
-        <div class="box" role="region" aria-label="Gesamter Text, der vorgelesen werden soll">
-            <p aria-hidden="true">Element 1</p>
-            <p aria-hidden="true">Element 2</p>
-            <p aria-hidden="true">Element 3</p>
-        </div>
-
         <div class="box" aria-labelledby="screenreader-text">
             <span id="screenreader-text" class="sr-only">Zusammenfassung aller Elemente: Dies ist eine alternative Beschreibung.</span>
             <p aria-hidden="true">Element 1</p>
             <p aria-hidden="true">Element 2</p>
             <p aria-hidden="true">Element 3</p>
-        </div>        
+        </div>       
+        
+        <div class="card">
+            <h3>Energiesparender und geräumiger</h3>
+            <p>Spart Energie, bietet mehr Platz und hält Lebensmittel länger frisch. Etwas teurer, aber lohnenswert durch geringere Stromkosten.</p>
+            <div class="product">
+                <img src="https://i.otto.de/i/otto/9750c00d-588d-5aab-9cc0-dd1a34be6e26?h=520&w=551&sm=clamp&upscale=true&fmt=auto" alt="Kühlschrank">
+                <div class="product-info">
+                    <strong>Hanseatic</strong>
+                    <p>Side-by-Side HSBS17590A1</p>
+                    <span class="price">1.199,99 €</span>
+                    <span class="old-price">1.699,00 €</span>
+                    <span class="efficiency">A</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px; margin-left: 16px; font-size: 0.8em; color: #666;">⚙ Alternative durch KI ermittelt</p>
+
+        <div class="divider"></div>
+
+        <div class="card">
+            <span id="screenreader-text" class="sr-only">Zusammenfassung aller Elemente: Dies ist eine alternative Beschreibung.</span>
+            <h3 aria-hidden="true">Energiesparender und geräumiger</h3>
+            <p aria-hidden="true">Spart Energie, bietet mehr Platz und hält Lebensmittel länger frisch. Etwas teurer, aber lohnenswert durch geringere Stromkosten.</p>
+            <div class="product">
+                <img aria-hidden="true" src="https://i.otto.de/i/otto/9750c00d-588d-5aab-9cc0-dd1a34be6e26?h=520&w=551&sm=clamp&upscale=true&fmt=auto" alt="Kühlschrank">
+                <div class="product-info">
+                    <strong aria-hidden="true">Hanseatic</strong>
+                    <p aria-hidden="true">Side-by-Side HSBS17590A1</p>
+                    <span aria-hidden="true" class="price">1.199,99 €</span>
+                    <span aria-hidden="true" class="old-price">1.699,00 €</span>
+                    <span aria-hidden="true" class="efficiency">A</span>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px; margin-left: 16px; font-size: 0.8em; color: #666;">⚙ Alternative durch KI ermittelt</p>
     </body>
 </html>
