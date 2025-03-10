@@ -22,6 +22,17 @@
                 padding: 16px;
                 margin-bottom: 16px;
             }
+
+            .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
         </style>
     </head>
 
@@ -32,6 +43,12 @@
             <p>Element 2</p>
             <p>Element 3</p>
         </div>
+
+        <div class="box" aria-label="Zusammenfassung aller Elemente: Dies ist eine alternative Beschreibung.">
+            <p>Element 1</p>
+            <p>Element 2</p>
+            <p>Element 3</p>
+        </div>        
 
         <div class="box" aria-label="Gesamter Text, der vorgelesen werden soll">
             <p>Element 1</p>
@@ -51,11 +68,11 @@
             <p aria-hidden="true">Element 3</p>
         </div>
 
-        <div role="region" aria-labelledby="beschreibung">
+        <div class="box" aria-labelledby="screenreader-text">
+            <span id="screenreader-text" class="sr-only">Zusammenfassung aller Elemente: Dies ist eine alternative Beschreibung.</span>
             <p aria-hidden="true">Element 1</p>
             <p aria-hidden="true">Element 2</p>
             <p aria-hidden="true">Element 3</p>
-        </div>
-        <span id="beschreibung" style="display:none;">Gesamter Text, der vorgelesen werden soll</span>
+        </div>        
     </body>
 </html>
