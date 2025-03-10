@@ -15,50 +15,34 @@
                 clip: rect(0, 0, 0, 0);
                 border: 0;
             }
+
+            .box {
+                background-color: lightgray;
+                border-radius: 16px;
+                padding: 16px;
+                margin-bottom: 16px;
+            }
         </style>
     </head>
 
     <body>
-        <h1>Dies ist ein Test V1</h1>
 
-        <div role="group" aria-label="iPhone 11 Pro, UVP 399 Euro durchgestrichen, aktueller Preis 299 Euro">
-            <p>iPhone 11 Pro</p>
-            <p>UVP <span style="text-decoration:line-through;">399</span></p>
-            <p>299</p>
-            <img alt="youtube logo" src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;">
-        </div>
-        
-
-        <div
-            role="application"
-            aria-label="calendar"
-            aria-description="Game schedule for the Boston Red Sox 2021 Season">
-            <h1>Red Sox 2021</h1>
-            <div role="grid">…</div>
+        <div class="box">
+            <p>Element 1</p>
+            <p>Element 2</p>
+            <p>Element 3</p>
         </div>
 
-
-        <div aria-labelledby="product-summary">
-            <p aria-hidden="true">iPhone 11 Pro</p>
-            <p aria-hidden="true">UVP <span style="text-decoration:line-through;">399</span></p>
-            <p aria-hidden="true">299</p>
-            <img aria-hidden="true" src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;" alt="YouTube Logo">
-            <span id="product-summary" class="visually-hidden">Test Produkt, iPhone 11 Pro, Ursprünglicher Preis 399 Euro, Jetzt nur 299 Euro.</span>
+        <div class="box" aria-label="Gesamter Text, der vorgelesen werden soll">
+            <p>Element 1</p>
+            <p>Element 2</p>
+            <p>Element 3</p>
         </div>
 
-        <div aria-label="test Produkt, iPhone 11 Pro, Ursprünglicher Preis 399 Euro, Jetzt nur 299 Euro">
-            <p>iPhone 11 Pro</p>
-            <p>UVP <span style="text-decoration:line-through;">399</span></p>
-            <p>299</p>
-            <img src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;" alt="YouTube Logo">
+        <div class="box" aria-label="Gesamter Text, der vorgelesen werden soll">
+            <p aria-hidden="true">Element 1</p>
+            <p aria-hidden="true">Element 2</p>
+            <p aria-hidden="true">Element 3</p>
         </div>
-
-        <div>
-            <p>iPhone 11 Pro</p>
-            <p>UVP <span style="text-decoration:line-through;">399</span></p>
-            <p>299</p>
-            <img alt="youtube logo" src="https://www.tutorialspoint.com/assets/questions/media/426142-1668760872.png" style="width:50px;height:50px;">
-        </div>
-    
     </body>
 </html>
